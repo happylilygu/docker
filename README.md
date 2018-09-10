@@ -26,12 +26,12 @@
 ### Dockerfile：
 ##### DIY first base image: 
 1. ```
-     FROM scratch //制作base image
+     FROM scratch  # 制作base image
      ADD 可执行程序 /
      CMD ["/可执行程序"]
 2.【**↑接docker commit**】
   ```
-     FROM centos //使用base image
+     FROM centos # 使用base image
      RUN yum install -y vim //在只读image中，能够运行该命令，是因为build过程中，  
                            //会根据centos（image）创建一个临时的container,并在该container中执行RUN语句,创建完成后remove
   ```
@@ -48,3 +48,11 @@
       最佳实践： 为了美观，复杂的RUN请用反斜线换行，避免无用分层，合并多条命令成一行  
       【例】： RUN yum update **&&** yum install -y vim **\**  
               yum install -y glibc
+              
+  5.WORKDIR: 设定当前工作目录，禁止使用RUN cd代替，同时要使用绝对路径  
+    ```
+       WORKDIR /test # 如果没有自动创建test目录  
+       WORKDIR demo  
+       RUN pwd  # 打印当前目录，输出结果为 /test/demo
+    ```  
+  6.
