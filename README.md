@@ -16,7 +16,7 @@
 ##### 删除：
 1. 批量删除: `docker rm $(docker container ls -aq)` or `docker rm $(docker container ls -f "status=exited" -q)`
 
-### Dockerfile
+### Dockerfile：
 ##### DIY first base image: 
 1. ```
      FROM scratch
