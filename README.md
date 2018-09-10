@@ -29,7 +29,7 @@
      FROM scratch //制作base image
      ADD 可执行程序 /
      CMD ["/可执行程序"]
-2.【**接docker commit**】
+2.【**↑接docker commit**】
   ```
      FROM centos //使用base image
      RUN yum install -y vim //在只读image中，能够运行该命令，是因为build过程中，  
