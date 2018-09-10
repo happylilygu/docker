@@ -40,3 +40,9 @@
      LABEL maintainer="作者"
      LABEL version="版本"
      LABEL description="描述"
+     
+  4.RUN：<1>. 使用场景：安装软件
+         <2>. 没运行一次，对于image来说都会生成新的layer
+              最佳实践： 为了美观，复杂的RUN请用反斜线换行，避免无用分层，合并多条命令成一行
+              【例】： RUN yum update && yum install -y vim \
+                      yum install -y glibc
