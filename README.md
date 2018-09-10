@@ -4,7 +4,7 @@
 3. [卸载docker](https://my.oschina.net/lwenhao/blog/1617108)
 ---
 ### 命令：
-##### 创建：
+##### 创建image：
 1. Build an image from a Dockerfile  
 (根据Dockerfile创建image)：`docker image(可省略) build [OPTIONS] PATH | URL | -` : `docker build -t XXX/XXX:latest . `
 2. Create new image from a container's changes  
