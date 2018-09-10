@@ -4,7 +4,7 @@
 3. [卸载docker](https://my.oschina.net/lwenhao/blog/1617108)
 ---
 ### 命令：
-1. 根据Dockerfile创建image：`docker build [OPTIONS] PATH | URL | -` : `docker build -t XXX/XXXX:latest . `
+1. 根据Dockerfile创建image：`docker image(可省略) build [OPTIONS] PATH | URL | -` : `docker build -t XXX/XXXX:latest . `
 2. 列出所有container id集合：`docker container ls -aq` == `docker container ls -a | awk {'print$1'}`
 3. 根据状态查找container集合：`docker container ls -f "status=exited"` ,-q:可以只列出ID。
 4. 批量删除: `docker rm $(docker container ls -aq)` or `docker rm $(docker container ls -f "status=exited" -q)`
