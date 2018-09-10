@@ -12,7 +12,7 @@
 `docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]` : `docker commit container_name XXX/docker-commit`
 ##### 查询：
 1. 列出所有container id集合：`docker container ls -aq` == `docker container ls -a | awk {'print$1'}`
-2. 根据状态查找container集合：`docker container ls -f "status=exited"` ,-q:可以只列出ID。
+2. 根据状态查找container集合：`docker container ls -f "status=exited"` ,-q: 可以只列出ID。
 ##### 删除：
 1. 批量删除: `docker rm $(docker container ls -aq)` or `docker rm $(docker container ls -f "status=exited" -q)`
 
