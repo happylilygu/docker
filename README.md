@@ -14,12 +14,8 @@
 ###### 例：
 ![docker commit](https://github.com/momokanni/docker/blob/master/piture/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180910183210.png?raw=true)
 
-【**推荐使用Dockerfile**】:  尽量使用官方的image作为base 
-```
-     FROM centos //使用base image
-     RUN yum install -y vim //在只读image中，能够运行该命令，是因为build过程中，  
-                           //会根据centos（image）创建一个临时的container,并在该container中执行RUN语句,创建完成后remove
-```
+【**推荐使用Dockerfile**】:  ↓见Dockerfile 2
+
 
 ##### 查询：
 1. 列出所有container id集合：`docker container ls -aq` == `docker container ls -a | awk {'print$1'}`
@@ -33,4 +29,9 @@
      FROM scratch //制作base image
      ADD 可执行程序 /
      CMD ["/可执行程序"]
+2.【**接docker commit**】
+  ```
+     FROM centos //使用base image
+     RUN yum install -y vim //在只读image中，能够运行该命令，是因为build过程中，  
+                           //会根据centos（image）创建一个临时的container,并在该container中执行RUN语句,创建完成后remove
   ```
