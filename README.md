@@ -17,7 +17,7 @@
 【**推荐使用dockerfile**】:  
 ```
      FROM centos
-     RUM 
+     RUN yum install -y vim
 ```
 
 ##### 查询：
