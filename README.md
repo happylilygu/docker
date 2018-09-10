@@ -14,6 +14,11 @@
 ###### 例：
 ![docker commit](https://github.com/momokanni/docker/blob/master/piture/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180910183210.png?raw=true)
 
+【**推荐使用dockerfile**】:  
+```
+     FROM centos
+     RUM 
+
 ##### 查询：
 1. 列出所有container id集合：`docker container ls -aq` == `docker container ls -a | awk {'print$1'}`
 2. 根据状态查找container集合：`docker container ls -f "status=exited"` ,-q: 只列出ID。
