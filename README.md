@@ -14,7 +14,7 @@
 ###### 例：
 ![docker commit](https://github.com/momokanni/docker/blob/master/piture/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180910183210.png?raw=true)
 
-【**推荐使用Dockerfile**】:  
+【**推荐使用Dockerfile**】:  尽量使用官方的image作为base 
 ```
      FROM centos //使用base image
      RUN yum install -y vim //在只读image中，能够运行该命令，是因为build过程中，  
