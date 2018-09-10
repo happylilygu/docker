@@ -56,10 +56,10 @@
        RUN pwd  //打印当前目录，输出结果为 /test/demo
  ```
     
-  6. ADD && COPY 
-  >1.添加**本地文件**到docker image根目录中 `ADD hello /`
-  >2.解压缩 `ADD jdk-8u181-linux-x64.tar.gz`
+  6. ADD && COPY: 
+  >1.添加**本地文件**到docker image根目录中 `ADD hello /`  
+  >2.解压缩 `ADD jdk-8u181-linux-x64.tar.gz`  
   >3.和WORKDIR配合使用：`WORKDIR /root`  
-                        `ADD hello(可执行程序) demo/` == /root/demo/hello
-  >4. 大部分情况下，COPY优于ADD
+     `ADD hello(可执行程序) demo/` == /root/demo/hello  
+  >4. 大部分情况下，COPY优于ADD  
   >5.使用curl or wget 添加**远程文件/目录** `RUN curl or wget`
