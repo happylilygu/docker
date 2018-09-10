@@ -50,9 +50,10 @@
               yum install -y glibc
               
   5.WORKDIR: 设定当前工作目录，禁止使用RUN cd代替，同时要使用绝对路径  
-    ```
+  ```
        WORKDIR /test //如果没有自动创建test目录  
        WORKDIR demo  
        RUN pwd  //打印当前目录，输出结果为 /test/demo
+ ```
     
   6.
