@@ -63,3 +63,10 @@
      `ADD hello(可执行程序) demo/` == /root/demo/hello  
   >4. 大部分情况下，COPY优于ADD  
   >5.使用curl or wget 添加**远程文件/目录** `RUN curl or wget`
+  
+  7.ENV
+  ```
+     ENV MYSQL_VERSION 5.6 # 设置常量
+     RUN apt-get install -y mysql-server="${MYSQL_VERSION}" \ # 引用常量
+     && rm -rf /var/lib/apt/lists/*
+  ```
