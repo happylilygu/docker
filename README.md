@@ -15,9 +15,8 @@
 
 ### Dockerfile
 ##### DIY first base image: 
-1. (```)
+1. ```
      FROM scratch</br>
      ADD 可执行程序 /</br>
      CMD ["/可执行程序"]
-   (```)
 
