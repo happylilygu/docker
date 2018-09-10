@@ -5,8 +5,11 @@
 ---
 ### 命令：
 ##### 创建：
-1. Build an image from a Dockerfile  (根据Dockerfile创建image)：`docker image(可省略) build [OPTIONS] PATH | URL | -` : `docker build -t XXX/XXX:latest . `
-2. Create new image from a container's changes  (某个container发生了改变，例如新添加了某个软件，则根据改变的container可以生成新的image):  `docker container commit` -> `docker commit`
+1. Build an image from a Dockerfile  
+(根据Dockerfile创建image)：`docker image(可省略) build [OPTIONS] PATH | URL | -` : `docker build -t XXX/XXX:latest . `
+2. Create new image from a container's changes  
+(某个container发生了改变，例如新添加了某个软件，则根据改变的container可以生成新的image):  
+`docker container commit` -> `docker commit`
 ##### 查询：
 1. 列出所有container id集合：`docker container ls -aq` == `docker container ls -a | awk {'print$1'}`
 2. 根据状态查找container集合：`docker container ls -f "status=exited"` ,-q:可以只列出ID。
