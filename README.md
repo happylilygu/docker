@@ -35,3 +35,8 @@
      RUN yum install -y vim //在只读image中，能够运行该命令，是因为build过程中，  
                            //会根据centos（image）创建一个临时的container,并在该container中执行RUN语句,创建完成后remove
   ```
+  3.LABEL定义了image中的meta-Data == 注释
+  ```
+     LABEL maintainer="作者"
+     LABEL version="版本"
+     LABEL description="描述"
