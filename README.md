@@ -18,6 +18,7 @@
 ```
      FROM centos
      RUM 
+```
 
 ##### 查询：
 1. 列出所有container id集合：`docker container ls -aq` == `docker container ls -a | awk {'print$1'}`
@@ -31,4 +32,4 @@
      FROM scratch
      ADD 可执行程序 /
      CMD ["/可执行程序"]
-
+  ```
