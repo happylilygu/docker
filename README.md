@@ -17,7 +17,8 @@
 【**推荐使用dockerfile**】:  
 ```
      FROM centos
-     RUN yum install -y vim
+     RUN yum install -y vim //【在只读image中，能够运行该命令，是因为build过程中，  
+                           //会根据centos（image）创建一个container,在container中执行该语句】
 ```
 
 ##### 查询：
