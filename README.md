@@ -92,4 +92,10 @@
   >3. 如果定了多个CMD，只有最后一个会被执行  
   
   *ENTRYPOINT*  
-  >1.
+  >1. 让容器以应用程序 or 服务的形式运行. 例如：启动mysql
+  >2. 不会被忽略，一定会执行
+  
+### 镜像发布
+1: 登录docker hub :`docker login` </br>
+2: 上传镜像：`docker push [OPTIONS] NAME[:TAG]` ：`docker push dockerHub账户名/hello-docker:latest`</br>         
+3：上传成功后，浏览器打开并登录[docker hub官网](https://hub.docker.com),在首页即可看见保存镜像的Repositories.</br>
