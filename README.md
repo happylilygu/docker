@@ -1,4 +1,4 @@
-**没时间去弄wiki，凑合着看**
+**没时间去弄wiki，凑合着给自己看**
 ### docker环境配置(Centos) + 命令集合 + Dockerfile
 1. 系统内核版本要大于3.10：`uname -sr` : Linux 4.18.6-1.el7.elrepo.x86_64   
 2. **未安装**过docker的Linux机器可参照[docker官方文档](https://docs.docker.com/install/linux/docker-ce/centos/#install-docker-ce-1),可跳过第三步:Optional。  
@@ -104,3 +104,7 @@
 
 ##### 方式2：
 [docker hub关联github并auto_build](https://blog.csdn.net/tina_ttl/article/details/51326011#%E5%A6%82%E4%BD%95%E5%9C%A8dockerhub%E4%B8%AD%E5%88%A9%E7%94%A8github%E4%B8%8A%E7%9A%84dockfile%E8%BF%9B%E8%A1%8Cauto-build)
+
+### 创建私有镜像
+1：`docker pull registry` </br>
+2: `docker run -d -p 5000:5000 --restart always --name registry registry:2`
