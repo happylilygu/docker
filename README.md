@@ -71,12 +71,12 @@
      && rm -rf /var/lib/apt/lists/*
   ```
   8.Dockerfile的两种写法:
-  >1.shell:  
+  >shell:  
         `FROM centos`</br>
         ` ENV name Docker `</br>
         `ENTRYPOINT echo "hello $name"`
        
-  >2.Exec:   
+  >Exec:   
         `FROM centos`  </br>
         `ENV name Docker`  </br>
         `ENTRYPOINT ["/bin/bash","-c","echo hello $name"]`   
