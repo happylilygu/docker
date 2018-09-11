@@ -105,7 +105,6 @@
 ##### 方式2：
 [docker hub关联github并auto_build](https://blog.csdn.net/tina_ttl/article/details/51326011#%E5%A6%82%E4%BD%95%E5%9C%A8dockerhub%E4%B8%AD%E5%88%A9%E7%94%A8github%E4%B8%8A%E7%9A%84dockfile%E8%BF%9B%E8%A1%8Cauto-build)
 
-### 创建私有镜像
+### 创建私有镜像仓库
 [官网教程](https://hub.docker.com/_/registry/)
-1：`docker pull registry` </br>
-2: `docker run -d -p 5000:5000 --restart always --name registry registry:2`
+1: `docker run -d -p 5000:5000 --restart always --name registry registry:2`
