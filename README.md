@@ -70,5 +70,14 @@
      RUN apt-get install -y mysql-server="${MYSQL_VERSION}" \ # 引用常量
      && rm -rf /var/lib/apt/lists/*
   ```
-
+  8.Dockerfile的两种写法:
+  >1.shell:  
+        `FROM centos`</br>
+        ` ENV name Docker `</br>
+        `ENTRYPOINT echo "hello $name"`
+       
+  >2.Exec:   
+        `FROM centos`  </br>
+        `ENV name Docker`  </br>
+        `ENTRYPOINT ["/bin/bash","-c","echo hello $name"]`   
   
