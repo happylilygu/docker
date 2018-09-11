@@ -1,3 +1,4 @@
+**没时间去弄wiki，凑合着看**
 ### docker环境配置(Centos) + 命令集合 + Dockerfile
 1. 系统内核版本要大于3.10：`uname -sr` : Linux 4.18.6-1.el7.elrepo.x86_64   
 2. **未安装**过docker的Linux机器可参照[docker官方文档](https://docs.docker.com/install/linux/docker-ce/centos/#install-docker-ce-1),可跳过第三步:Optional。  
