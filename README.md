@@ -97,5 +97,5 @@
   
 ### 镜像发布
 1: 登录docker hub :`docker login` </br>
-2: 上传镜像：`docker push [OPTIONS] NAME[:TAG]` ：`docker push dockerHub账户名/hello-docker:latest`</br>         
+2: 上传镜像：`docker push [OPTIONS] NAME[:TAG]` ：`docker push dockerHub账户名/hello-docker:latest`  
 3：上传成功后，浏览器打开并登录[docker hub官网](https://hub.docker.com),在首页即可看见保存镜像的Repositories.</br>
