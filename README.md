@@ -82,6 +82,7 @@
         `ENTRYPOINT ["/bin/bash","-c","echo hello $name"]`   
   
   9. **CMD 和 ENTRYPOINT的区别**  
+  
   *CMD*
   >1. 容器启动时默认执行的命令
   >2. docker run 指定了其他命令，CMD命令被忽略  
