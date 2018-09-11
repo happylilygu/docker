@@ -106,14 +106,15 @@
 [docker hub关联github并auto_build](https://blog.csdn.net/tina_ttl/article/details/51326011#%E5%A6%82%E4%BD%95%E5%9C%A8dockerhub%E4%B8%AD%E5%88%A9%E7%94%A8github%E4%B8%8A%E7%9A%84dockfile%E8%BF%9B%E8%A1%8Cauto-build)
 
 ### 创建私有镜像仓库
-[官网教程](https://hub.docker.com/_/registry/)
-1: `docker run -d -p 5000:5000 --restart always --name registry registry:2`
-2：上传步骤：
-          >1. 生成image：`docker build -t IP:Port/hello-world .`</br>
-          >2. 创建`/etc/docker/daemon.json`文件，内容：`{"insecure-registries":["IP:Port"]}`</br>
-          >3. 修改`/lib/systemd/system/docker.service`docker的启动文件,添加内容：`EnvironmentFile=-/etc/docker/daemon.json`
-          >4. 重启：`service docker restart`
-          >5. 上传：`docker push imageName`
-3: 验证上传成功：
-          >1. 因为私有仓库，docker并没有提供web页面，但是提供了[API访问接口](https://docs.docker.com/registry/spec/api/)
-          >2. 查询路径：IP:docker_port/API路径 ：`10.25.32.181:5000/v2/<name>/tags/list`
+[官网教程](https://hub.docker.com/_/registry/)  
+1: `docker run -d -p 5000:5000 --restart always --name registry registry:2`</br>
+**上传步骤：**  
+>1. 生成image：`docker build -t IP:Port/hello-world .`  
+>2. 创建`/etc/docker/daemon.json`文件，内容：`{"insecure-registries":["IP:Port"]}`  
+>3. 修改`/lib/systemd/system/docker.service`docker的启动文件,添加内容：`EnvironmentFile=-/etc/docker/daemon.json`  
+>4. 重启：`service docker restart`  
+>5. 上传：`docker push imageName` 
+
+ **验证上传成功：**  
+>1. 因为私有仓库，docker并没有提供web页面，但是提供了[API访问接口](https://docs.docker.com/registry/spec/api/)  
+>2. 查询路径：IP:docker_port/API路径 ：`10.25.32.181:5000/v2/<name>/tags/list`
