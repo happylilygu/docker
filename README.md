@@ -84,4 +84,5 @@
   9. **CMD 和 ENTRYPOINT的区别**
   >1. 容器启动时默认执行的命令
   >2. docker run 指定了其他命令，CMD命令被忽略  
-  例：
+  例：  
+  ![docker run 指定了其他命令，CMD命令被忽略]()
