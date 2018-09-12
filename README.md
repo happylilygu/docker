@@ -24,6 +24,11 @@
 ##### 删除：
 1. 批量删除: `docker rm $(docker container ls -aq)` or `docker rm $(docker container ls -f "status=exited" -q)`
 
+##### 查看日志：
+1. `docker logs container_id`
+
+##### 
+
 ### Dockerfile：
 ##### DIY first base image: 
 1. ```
