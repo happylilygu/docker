@@ -14,10 +14,15 @@
     ENTRYPOINT ["java","-Djava.security.egd=file:/dev/.urandom","-jar","kill.jar"] # 百度：为了缩短 Tomcat 的启动时间
   ```
 3.创建image: `docker build -t XXXX/kill-docker:latest .`(命令只要符合语法，怎么写随意，开心就好)
-4.运行image，创建container: `docker run --name kill -p 8080:8080 -it XXXX/kill-docker --verbose` (命令分解，search by yourself)
+4.运行image，创建container: `docker run -d --name kill -p 8080:8080 -it XXXX/kill-docker --verbose` (命令分解，search by yourself)
 
 **注：**
-  1. 如果服务器采用的是云服务器，需放开指定访问接口(阿里云在*安全组*中设置)  
+  1. 如果服务器采用的是云服务器，需放开指定访问接口(阿里云在***安全组***中设置)  
   2. 要进入container内部：`docker exec -it container_id /bin/bash`  
-  3. 查看日志：`docker logs container_id`
+  3. 查看日志：`docker logs container_id`  
+  4. 容器启动：`docker start container_id/container_name`  
+  5. 容器关闭：`docker stop container_id/container_name`  
+  6. 容器资源检查： `docker inspect container_id/container_name`  
+  7. 运行中容器地址：`docker exec -it container_id/container_name ip a`
+  命令太多。。。
   
