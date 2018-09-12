@@ -17,4 +17,7 @@
 4.运行image，创建container: `docker run --name kill -p 8080:8080 -it XXXX/kill-docker --verbose` (命令分解，search by yourself)
 
 **注：**
-  1. 如果服务器采用的是云服务器，需放开指定访问接口（阿里云在*安全组*中设置）
+  1. 如果服务器采用的是云服务器，需放开指定访问接口(阿里云在*安全组*中设置)  
+  2. 要进入container内部：`docker exec -it container_id /bin/bash`  
+  3. 查看日志：`docker logs container_id`
+  
