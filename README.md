@@ -29,7 +29,8 @@
 
 ##### 
 
-### Dockerfile：
+
+## Dockerfile：
 ##### DIY first base image: 
 1. ```
      FROM scratch  # 制作base image
