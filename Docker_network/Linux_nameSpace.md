@@ -19,5 +19,5 @@
 >2. 绑定新创建的veth端口到ns上：`ip link set 端口名称 netns ns名称`
 >3. 端口设置IP： `ip netns exec ns名称 ip addr add IP dev 端口名称`
 >4. 唤醒veth端口：ns命令6
->5. 测试两个ns中veth端口是否调通：`ping 端口IP`
+>5. 测试两个ns中veth端口是否调通：`ip netns exec 端口1所在ns名称 ping 端口2_IP`
   
