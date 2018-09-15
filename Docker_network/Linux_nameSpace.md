@@ -11,4 +11,5 @@
 ![演示图](https://github.com/momokanni/docker/blob/master/piture/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180915180000.png)
 
 ***注：***  
-  1. 执行命令6，link state=UNKNOW,原因：单个端口无法up，必须一对。
+  1. 执行命令6，link state=UNKNOW,原因：单个端口无法up，必须一对。  
+  ![图解](https://github.com/momokanni/docker/blob/master/piture/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180915182219.png)
