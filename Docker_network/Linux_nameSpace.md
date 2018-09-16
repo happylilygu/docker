@@ -20,7 +20,7 @@
   **解决步骤：**
 >1. 添加一对veth端口：`ip link add 端口名称1 type veth peer name 端口名称2`  
 >2. 绑定新创建的veth端口到ns上：`ip link set 端口名称 netns ns名称`  
->3. 端口设置IP： `ip netns exec ns名称 ip addr add IP dev 端口名称`  
+>3. 端口设置IP： `ip netns exec ns名称 ip addr add IP/掩码 dev 端口名称`  
 >4. 唤醒veth端口：ns命令6  
 >5. 测试两个ns中veth端口是否调通：`ip netns exec 端口1所在ns名称 ping 端口2_IP`  
 ![步骤图解](https://github.com/momokanni/docker/blob/master/piture/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180915192138.png)
