@@ -1,5 +1,5 @@
 ### Linux命名空间-NameSpace 感受一下就行，不需要特别详细的了解
-**该文目的：Docker容器网络在linux上也是基于network namespace实现，所以此文只是将其“自动化”的创建过程做成了“分解动作”**
+**该文目的：Docker容器网络在linux上也是基于network namespace实现，所以此文只是将其“自动化”的创建过程做了简单的分解**
 
  `namespace简称为：ns`
 
