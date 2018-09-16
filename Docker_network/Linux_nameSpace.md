@@ -24,3 +24,5 @@
 >4. 唤醒veth端口：ns命令6  
 >5. 测试两个ns中veth端口是否调通：`ip netns exec 端口1所在ns名称 ping 端口2_IP`  
 ![步骤图解](https://github.com/momokanni/docker/blob/master/piture/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180916143141.png)
+
+**[附一篇极好的文章](https://yq.aliyun.com/articles/68699?spm=5176.10695662.1996646101.searchclickresult.367dafbcjtbFYG&accounttraceid=0bbdd29a-fb1e-47d4-aa4d-bbe5cf901316)**
