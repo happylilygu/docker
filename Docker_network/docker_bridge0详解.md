@@ -10,6 +10,9 @@
 ![图示一](https://github.com/momokanni/docker/blob/master/piture/bridge_2.png)  
 ![图示二](https://github.com/momokanni/docker/blob/master/piture/bridge_3.png)  
 ![图示三](https://github.com/momokanni/docker/blob/master/piture/bridge_4.png)  
+**注：**
+1. 通过命令：`docker network inspect bridge` or ` ip addr show veth8e24a52 ` 查看 绑定到docker0 上的两个容器veth端口,都有mac地址。这也说明了docker0的虚拟交换机的身份，交换机是通过mac地址通信的，连接到交换机的设备必须具有mac地址。  
+2. 
 ![总结](https://github.com/momokanni/docker/blob/master/piture/bridge_1.png)
 
 ##### 容器访问外网
