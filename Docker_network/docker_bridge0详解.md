@@ -17,7 +17,7 @@
 3. 在容器内和host主机上分别运行命令：`route -n` 查看路由。  
    在host中，访问本网段`169.254.0.0 , 172.17.224.0`是通过eth0转发数据包的，访问`172.18.0.0`网段是通过docker0转发数据包的，而对于其他如公网是通过eth0将数据包转发给网关`172.17.239.253`，再由该网关进行数据包转发的，比如上网。  
 ![路由图示](https://github.com/momokanni/docker/blob/master/piture/bridge_6.png)  
-![总结](https://github.com/momokanni/docker/blob/master/piture/bridge_1.png)
+![总结](https://github.com/momokanni/docker/blob/master/piture/bridge.png)
 
 ##### 容器访问外网
 ![图示](https://github.com/momokanni/docker/blob/master/piture/bridge_5.png)
