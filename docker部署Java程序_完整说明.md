@@ -18,7 +18,7 @@
 
 **注：**
   1. 如果服务器采用的是云服务器，需放开指定访问接口(阿里云在***安全组***中设置)  
-  2. 要进入container内部：`docker exec -it container_id /bin/bash`  
+  2. 进入container内部：`docker exec -it container_id /bin/bash`  
   3. 查看日志：`docker logs container_id`  
   4. 容器启动：`docker start container_id/container_name`  
   5. 容器关闭：`docker stop container_id/container_name`  
