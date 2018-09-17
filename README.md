@@ -22,7 +22,7 @@
 1. 列出所有container id集合：`docker container ls -aq` == `docker container ls -a | awk {'print$1'}`
 2. 根据状态查找container集合：`docker container ls -f "status=exited"` ,-q: 只列出ID。  
 3. 查询网络：`docker network ls`  
-4. 容器网络资源检查：`docker network inspect container_id/container_name`
+4. 容器网络资源检查：`docker network inspect container_id/container_name/networkType`
 ##### 删除：
 1. 批量删除: `docker rm $(docker container ls -aq)` or `docker rm $(docker container ls -f "status=exited" -q)`
 
