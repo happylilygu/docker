@@ -10,9 +10,10 @@
 ![图示一](https://github.com/momokanni/docker/blob/master/piture/bridge_2.png)  
 ![图示二](https://github.com/momokanni/docker/blob/master/piture/bridge_3.png)  
 ![图示三](https://github.com/momokanni/docker/blob/master/piture/bridge_4.png)  
+
 **注：**
 1. 通过命令：`docker network inspect bridge` or ` ip addr show veth8e24a52 ` 查看 绑定到docker0 上的两个容器veth端口,都有mac地址。这也说明了docker0的虚拟交换机的身份，交换机是通过mac地址通信的，连接到交换机的设备必须具有mac地址。  
-2. 
+2. 由于docker0自身也具有mac地址,所以与纯二层交换机不同。并且绑定了IP 172.17.0.1，容器默认把docker0作为了网关。也就是docker0还兼具路由的功能，因此可以把docker0看做是一个三层交换机，可以做二层数据包转发，也可以做三层路由转发。
 ![总结](https://github.com/momokanni/docker/blob/master/piture/bridge_1.png)
 
 ##### 容器访问外网
