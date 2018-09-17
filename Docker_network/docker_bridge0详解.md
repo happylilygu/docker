@@ -11,3 +11,6 @@
 ![图示二](https://github.com/momokanni/docker/blob/master/piture/bridge_3.png)  
 ![图示三](https://github.com/momokanni/docker/blob/master/piture/bridge_4.png)  
 ![总结](https://github.com/momokanni/docker/blob/master/piture/bridge_1.png)
+
+##### 容器访问外网
+![图示](https://github.com/momokanni/docker/blob/master/piture/bridge_5.png)
