@@ -6,7 +6,7 @@
 3. No.1. `docker ps `,  
    No.2. ` docker network inspect bridge `,  
    No.3.   ` ip a `
-   No.4. ` brctl show ` ,brctl作用： 用来进行以太网桥接（bridge）的管理 
+   No.4. ` brctl show ` , **brctl： 用来进行以太网桥接（bridge）的管理** 
 ![图示一](https://github.com/momokanni/docker/blob/master/piture/bridge_2.png)  
 ![图示二](https://github.com/momokanni/docker/blob/master/piture/bridge_3.png)  
 ![图示三](https://github.com/momokanni/docker/blob/master/piture/bridge_4.png)  
