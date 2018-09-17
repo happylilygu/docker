@@ -1,6 +1,6 @@
-### 容器间如何通过bridge实现相互访问(单台机器) + 容器访问外网
-`该篇主要以命令和截图为主，很好理解`
-感知步骤：
+### 容器间如何通过bridge实现相互访问(单台机器) + 容器访问外网  
+`该篇主要以命令和截图为主，很好理解`  
+分解：
 1. 安装brctl: `yum install bridge-utils`
 2. 运行两个docker container(具体命令看[前文](https://github.com/momokanni/docker/blob/master/README.md))
 3. No.1. `docker ps `,  
