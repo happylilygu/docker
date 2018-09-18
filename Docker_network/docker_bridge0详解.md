@@ -4,9 +4,9 @@
 1. 安装brctl: `yum install bridge-utils`
 2. 运行两个docker container(具体命令看[前文](https://github.com/momokanni/docker/blob/master/README.md))
 3. 命令集： `docker ps `,  
-    ` docker network inspect bridge `,  
-    ` ip a `
-    ` ifconfig `
+    ` docker network inspect bridge `  
+    ` ip a `  
+    ` ifconfig `  
     ` brctl show ` , **brctl： 用来进行以太网桥接（bridge）的管理**  
   
   
