@@ -9,8 +9,9 @@
     ` ifconfig `  
     ` brctl show ` , **brctl： 用来进行以太网桥接（bridge）的管理**  
     ` ip addr show 端口名称 `  
-    ` iptables -L -n -t nat --line-numbers`  
-    `route -n`  
+    ` iptables -L -n -t nat --line-numbers` 查看nat表  
+    ` route -n`  
+    ` iptables -nat -L -n `
   
   
 #### docker0的作用：  
