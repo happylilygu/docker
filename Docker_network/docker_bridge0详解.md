@@ -37,5 +37,14 @@
 
 ***  
 
-##### 容器访问外网
+##### 结合上图↑分析：容器访问外网
+```
+    如果采用云服务器，默认情况下不需要进行设置，即可访问外网。 
+    通过docker0实现container间的访问。  
+    通过host eth0实现访问外网。  
+    通过docker0组成了网段为：172.18.0.0/16的以太网，container发起请求时，相同网段则经由docker0转发到目标contaier,  
+    如果是不同网段地址，则经由docker0转发到host另一个网卡eth0上，由eth0负责下一步的数据包转发，比如外网地址。
+```
+
+
 ![图示](https://github.com/momokanni/docker/blob/master/piture/bridge_5.png)
