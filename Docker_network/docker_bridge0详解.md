@@ -17,7 +17,7 @@
 
 
 ![图2](https://github.com/momokanni/docker/blob/master/piture/bridge_4.png "图2")  
-**解：** docker运行test1 && test2 两个container，在host主机运行命令`brctl show`发现，每运行一个container，就会产生***一对veth端口***，其中一端连接到docker0上，另一端连接到container中eth0上，这样，所有连接到docker0的容器组成了一个局域网。在此的作用就是**虚拟交换机**，类似于下图：  
+**解：** docker运行test1 && test2 两个container，在host主机运行命令`brctl show`发现，每运行一个container，就会产生**一对veth端口**，其中一端连接到docker0上，另一端连接到container中eth0上，这样，所有连接到docker0的容器组成了一个局域网。在此的作用就是**虚拟交换机**，类似于下图： 
 ![图3](https://github.com/momokanni/docker/blob/master/piture/bridge.png "图3")  
 
 ![图3](https://github.com/momokanni/docker/blob/master/piture/bridge_2.png "图3")  
