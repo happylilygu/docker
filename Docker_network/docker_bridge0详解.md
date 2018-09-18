@@ -63,7 +63,9 @@
     Linux内核会修改数据包源地址为host主机eth0的地址（也就是172.17.235.100），  
     然后把报文转发出去。对于外部来说，报文是从主机eth0发送出去的。  
     局域网内的机器由于都是私有IP，是无法直接访问互联网的（数据包可以发出去，但回不来。）  
-    如果要上网，可以通过硬件路由器 or 软件路由，在iptables的nat表中的POSTROUTING链中添加SNAT规则。
+    如果要上网，可以通过硬件路由器 or 软件路由，在iptables的nat表中的POSTROUTING链中添加SNAT规则。  
+    
+    **[一篇极好的文章，本文大部分摘自该篇](https://www.jianshu.com/p/7abe38059c8b?nomobile=yes)**
     
 
 ![图示](https://github.com/momokanni/docker/blob/master/piture/bridge_5.png)
