@@ -49,7 +49,8 @@
 ##### 分析一下报文是怎么发送到外部的  
 ```  
     container内部发起一条外网请求报文，通过container的eth0传输，在docker0的veth端口被接收。  
-    此时报文已经来到host主机，通过查询主机路由表`route -n`，发现报文应通过host的eth0（默认网关）发送出去
-
+    此时报文已经来到host主机，通过查询主机路由表`route -n`，发现报文应通过docker0转发到host的eth0（默认网关）再发送出去。  
+    注：要实现host主机的docker0和eth0两个网卡间传递数据包，必须先启用ip_forward功能。
+```
 
 ![图示](https://github.com/momokanni/docker/blob/master/piture/bridge_5.png)
