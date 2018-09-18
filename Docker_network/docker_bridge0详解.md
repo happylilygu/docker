@@ -8,7 +8,9 @@
     ` ip a `  
     ` ifconfig `  
     ` brctl show ` , **brctl： 用来进行以太网桥接（bridge）的管理**  
-    ` ip addr show 端口名称 `
+    ` ip addr show 端口名称 `  
+    ` iptables -L -n -t nat --line-numbers`  
+    `route -n`  
   
   
 #### docker0的作用：  
@@ -50,7 +52,17 @@
 ```  
     container内部发起一条外网请求报文，通过container的eth0传输，在docker0的veth端口被接收。  
     此时报文已经来到host主机，通过查询主机路由表`route -n`，发现报文应通过docker0转发到host的eth0（默认网关）再发送出去。  
-    注：要实现host主机的docker0和eth0两个网卡间传递数据包，必须先启用ip_forward功能。
-```
+    注：要实现host主机的docker0和eth0两个网卡间传递数据包，必须先启用ip_forward功能。  
+    如果目标地址并不属于host主机所在网段，那么会匹配机器上的 iptables中的nat表POSTROUTING链中的规则。  
+```  
+注：
+    1.在host主机运行命令 `iptables -L -n -t nat --line-numbers`，查看nat表，只需看POSTROUTING链：  
+    ![图7](https://github.com/momokanni/docker/blob/master/piture/bridge_8.png "图7: 查看nat表")  
+    选中标白行说明：对于源地址为`172.18.0.0/16`的数据包，发出去之前通过MQSQUERADE伪装。  
+    Linux内核会修改数据包源地址为host主机eth0的地址（也就是172.17.235.100），  
+    然后把报文转发出去。对于外部来说，报文是从主机eth0发送出去的。  
+    局域网内的机器由于都是私有IP，是无法直接访问互联网的（数据包可以发出去，但回不来。）  
+    如果要上网，可以通过硬件路由器 or 软件路由，在iptables的nat表中的POSTROUTING链中添加SNAT规则。
+    
 
 ![图示](https://github.com/momokanni/docker/blob/master/piture/bridge_5.png)
