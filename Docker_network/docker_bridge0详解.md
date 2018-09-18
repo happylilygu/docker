@@ -10,7 +10,8 @@
     ` brctl show ` , **brctl： 用来进行以太网桥接（bridge）的管理**  
   
   
-**docker0的作用：**  
+#### docker0的作用：  
+
 ![图1](https://github.com/momokanni/docker/blob/master/piture/bridge_1.png "图1")  
 **解：** docker0的IP为`172.18.0.1`,其所在网段默认为`172.18.0.0/16`,可以将docker0看做是host主机的一块**虚拟网卡**。这样host主机就等同于配置了双网卡，两块网卡之间可以通信，但前提是启用ip_forward。  
 
