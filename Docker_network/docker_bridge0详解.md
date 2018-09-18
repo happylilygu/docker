@@ -3,13 +3,16 @@
 分解：
 1. 安装brctl: `yum install bridge-utils`
 2. 运行两个docker container(具体命令看[前文](https://github.com/momokanni/docker/blob/master/README.md))
-3. No.1. `docker ps `,  
-   No.2. ` docker network inspect bridge `,  
-   No.3.   ` ip a `
-   No.4. ` brctl show ` , **brctl： 用来进行以太网桥接（bridge）的管理** 
-![图示一](https://github.com/momokanni/docker/blob/master/piture/bridge_2.png "图一")  
-![图示二](https://github.com/momokanni/docker/blob/master/piture/bridge_3.png "图二")  
-![图示三](https://github.com/momokanni/docker/blob/master/piture/bridge_4.png "图三")  
+3. 命令集： `docker ps `,  
+    ` docker network inspect bridge `,  
+    ` ip a `
+    ` ifconfig `
+    ` brctl show ` , **brctl： 用来进行以太网桥接（bridge）的管理**  
+图示：  
+![图1](https://github.com/momokanni/docker/blob/master/piture/bridge_1.png "图1")
+![图2](https://github.com/momokanni/docker/blob/master/piture/bridge_2.png "图2")  
+![图3](https://github.com/momokanni/docker/blob/master/piture/bridge_3.png "图3")  
+![图4](https://github.com/momokanni/docker/blob/master/piture/bridge_4.png "图4")  
 
 **docker0的作用：**
 1. 通过命令：`docker network inspect bridge` or ` ip addr show veth8e24a52 ` 查看 绑定到docker0 上的两个容器veth端口,都有mac地址。这也说明了docker0的**虚拟交换机**的身份，交换机是通过mac地址通信的，连接到交换机的设备必须具有mac地址。  
