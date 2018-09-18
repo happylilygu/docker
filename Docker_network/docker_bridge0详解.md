@@ -30,7 +30,7 @@
 2. 由于docker0自身也具有mac地址,所以与纯二层交换机不同。并且绑定了IP `172.18.0.1`，容器默认把docker0作为了网关。也就是docker0还兼具**路由**的功能，因此可以把docker0看做是一个三层交换机，可以做二层数据包转发，也可以做三层路由转发。  
 3. 在容器内和host主机上分别运行命令：`route -n` 查看路由。  
    在host中，访问网段`169.254.0.0 , 172.17.224.0`是通过eth0转发数据包的，访问`172.18.0.0`网段是通过docker0转发数据包的，而对于其他如公网是通过eth0将数据包转发给网关`172.17.239.253`，再由该网关进行数据包转发的，比如上网。  
-![路由图示](https://github.com/momokanni/docker/blob/master/piture/bridge_6.png "图四")  
+![图6](https://github.com/momokanni/docker/blob/master/piture/bridge_6.png "图6：路由")  
 
 场景：  
 ![场景图](https://github.com/momokanni/docker/blob/master/piture/bridge_7.png "场景图")
@@ -44,7 +44,12 @@
     通过host eth0实现访问外网。  
     通过docker0组成了网段为：172.18.0.0/16的以太网，container发起请求时，相同网段则经由docker0转发到目标contaier,  
     如果是不同网段地址，则经由docker0转发到host另一个网卡eth0上，由eth0负责下一步的数据包转发，比如外网地址。
-```
+```  
+
+##### 分析一下报文是怎么发送到外部的  
+```  
+    container内部发起一条外网请求报文，通过container的eth0传输，在docker0的veth端口被接收。  
+    此时报文已经来到host主机，通过查询主机路由表`route -n`，发现报文应通过host的eth0（默认网关）发送出去
 
 
 ![图示](https://github.com/momokanni/docker/blob/master/piture/bridge_5.png)
