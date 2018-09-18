@@ -8,6 +8,7 @@
     ` ip a `  
     ` ifconfig `  
     ` brctl show ` , **brctl： 用来进行以太网桥接（bridge）的管理**  
+    ` ip addr show 端口名称 `
   
   
 #### docker0的作用：  
@@ -16,11 +17,15 @@
 **解：** docker0的IP为`172.18.0.1`,其所在网段默认为`172.18.0.0/16`,可以将docker0看做是host主机的一块**虚拟网卡**。这样host主机就等同于配置了双网卡，两块网卡之间可以通信，但前提是启用ip_forward。  
 
 
+![图3](https://github.com/momokanni/docker/blob/master/piture/bridge_2.png "图3")  
 ![图2](https://github.com/momokanni/docker/blob/master/piture/bridge_4.png "图2")  
 **解：** docker运行test1 && test2 两个container，在host主机运行命令`brctl show`发现，每运行一个container，就会产生**一对veth端口**，其中一端连接到docker0上，另一端连接到container中eth0上，这样，所有连接到docker0的容器组成了一个局域网。在此的作用就是**虚拟交换机**，类似于下图： 
 ![图3](https://github.com/momokanni/docker/blob/master/piture/bridge.png "图3")  
 
-![图3](https://github.com/momokanni/docker/blob/master/piture/bridge_2.png "图3")  
+
+
+
+ 
   
 
 ![图2](https://github.com/momokanni/docker/blob/master/piture/bridge_3.png "图2")
