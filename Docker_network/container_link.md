@@ -13,6 +13,8 @@
 
 **创建network**  
 ![图2](https://github.com/momokanni/docker/blob/master/piture/link_2.png "图2：docker network create -d bridge 网络名称")  
+
+运行container：test3，并指定network。
 ![图3](https://github.com/momokanni/docker/blob/master/piture/link_3.png "图3：docker network inspect 网络名称")  
 
 
