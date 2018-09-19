@@ -23,6 +23,10 @@
 ![图4](https://github.com/momokanni/docker/blob/master/piture/link_4.png "图4: docker network inspect my_bridge")  
 
 ![图5](https://github.com/momokanni/docker/blob/master/piture/link_5.png "图5: docker network inspect bridge")  
+![图6](https://github.com/momokanni/docker/blob/master/piture/link_6.png "图6：docker exec -it test1 /bin/sh")  
+
+注：  
+     
 
 
 
