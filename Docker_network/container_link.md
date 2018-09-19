@@ -27,7 +27,8 @@
 ![图7](https://github.com/momokanni/docker/blob/master/piture/link_7.png "图7: ")  
 
 
-注：  
+**注：**  
+     test3在未link test1的情况下，之所以能ping通，是因为两个container都连到自己创建的my_bridge上了，所以两个默认是link的 
      
 
 
