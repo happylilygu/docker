@@ -17,4 +17,14 @@
 运行container：test3，并指定network。
 ![图3](https://github.com/momokanni/docker/blob/master/piture/link_3.png "图3：docker network inspect 网络名称")  
 
+更改已存在的container的network  
+执行命令：`docker network connect my_bridge test1`  
+然后分别检查my_bridge和bridge：`docker network inspect 网络名称`  
+![图4](https://github.com/momokanni/docker/blob/master/piture/link_4.png "图4: docker network inspect my_bridge")  
+
+![图5](https://github.com/momokanni/docker/blob/master/piture/link_5.png "图5: docker network inspect bridge")  
+
+
+
+
 
