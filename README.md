@@ -80,7 +80,7 @@
      ENV MYSQL_VERSION 5.6 # 设置常量
      RUN apt-get install -y mysql-server="${MYSQL_VERSION}" \ # 引用常量
      && rm -rf /var/lib/apt/lists/*
-  ```
+  ```  
   8.Dockerfile的两种写法:
   >shell:  
         `FROM centos`</br>
@@ -103,7 +103,10 @@
   
   *ENTRYPOINT*  
   >1. 让容器以应用程序 or 服务的形式运行. 例如：启动mysql
-  >2. 不会被忽略，一定会执行
+  >2. 不会被忽略，一定会执行  
+  
+  10. VOLUME && EXPOSE <预留篇>  
+  TODO.
   
 ### 镜像发布
 
