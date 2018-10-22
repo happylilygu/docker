@@ -66,8 +66,7 @@
        RUN pwd  //打印当前目录，输出结果为 /test/demo
  ```
     
-  6. ADD && COPY: 
-  *ADD功能描述：*
+  6.*ADD功能描述：*
   >1.添加**本地文件**到docker image根目录中 `ADD hello /`  
   >2.解压缩 `ADD jdk-8u181-linux-x64.tar.gz`  
   >3.和WORKDIR配合使用： 
