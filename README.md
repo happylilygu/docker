@@ -56,7 +56,7 @@
   >1. 使用场景：安装软件  
   >2. 每运行一次，对于image来说都会生成新的layer  
       最佳实践： 为了美观，复杂的RUN请用反斜线换行，避免无用分层，合并多条命令成一行  
-      【例】： RUN yum update **&&** yum install -y vim **\**  
+      【例】： RUN yum update **&&** yum install -y vim \  
               yum install -y glibc
               
   5.WORKDIR: 设定当前工作目录，禁止使用RUN cd代替，同时要使用绝对路径  
