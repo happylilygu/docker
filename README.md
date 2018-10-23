@@ -129,7 +129,7 @@
     CMD [] # 用来接收命令行参数
 ```  
 运行该Dockerfile生成的image：`docker run -it docker2sun/stress --vm 1 --verbose`  
-image后的即为CMD接收的参数
+image后的即为CMD需要接收的参数
           
   
   10. EXPOSE:  
