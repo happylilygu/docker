@@ -127,13 +127,16 @@
 
 ### 创建私有镜像仓库
 [官网教程](https://hub.docker.com/_/registry/)  
-1: `docker run -d -p 5000:5000 --restart always --name registry registry:2`</br>
+1: 创建命令: `docker run -d -p 5000:5000 --restart always --name registry registry:2`</br>
+   该命令执行完成后，相当于创建了一个web服务器，这时就可以操作镜像进行push or pull  
 **上传步骤：**  
->1. 生成image：`docker build -t IP:Port/hello-world .`  
+>1. 生成image(注意镜像命名规则)：`docker build -t IP:Port/hello-world .`  
 >2. 创建`/etc/docker/daemon.json`文件，内容：`{"insecure-registries":["IP:container_port"]}`  
->3. 修改`/lib/systemd/system/docker.service`docker的启动文件,添加内容：`EnvironmentFile=-/etc/docker/daemon.json`  
+    该命令作用：使私有仓库信任来自于某个IP/端口上传的镜像，这就保证了安全性。
+>3. 修改`/lib/systemd/system/docker.service`docker的启动文件,添加内容：`EnvironmentFile=-/etc/docker/daemon.json`
+    该命令作用: 将步骤2修改的文件添加到docker服务配置文件中，使得步骤2的配置得以生效。  
 >4. 重启：`service docker restart`  
->5. 上传：`docker push imageName` 
+>5. 上传：`docker push imageName(示例:docker push IP:Port/hello-world)` 
 
  **验证上传成功：**  
 >1. 因为私有仓库，docker并没有提供web页面，但是提供了[API访问接口](https://docs.docker.com/registry/spec/api/)  
