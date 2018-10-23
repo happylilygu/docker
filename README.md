@@ -114,10 +114,10 @@
 ### 镜像发布
 
 ##### 方式1：
-1: 先在[docker hub](https://hub.docker.com/)创建账户 
+1: 先在[docker hub](https://hub.docker.com/)创建账户 </br>
 2: 登录docker hub命令 : `docker login` </br>
 3: 登录成功后，上传镜像：`docker push [OPTIONS] NAME[:TAG]` ：`docker push dockerHub账户名/hello-docker:latest`  
-4：上传成功后，浏览器打开并登录[docker hub官网](https://hub.docker.com),在首页即可看见保存镜像的Repositories.</br>
+4: 上传成功后，浏览器打开并登录[docker hub官网](https://hub.docker.com),在首页即可看见保存镜像的Repositories.</br>
 **注：** 镜像命名格式：dockerHub账户名/XXX   这是必须条件
 
 ##### 方式2：
