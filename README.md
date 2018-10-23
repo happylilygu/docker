@@ -34,7 +34,7 @@
 ---
 
 
-## Dockerfile：
+## Dockerfile：[官方文档](https://docs.docker.com/engine/reference/builder/#entrypoint)  
 ##### DIY first base image: 
 1. ```
      FROM scratch  # 制作base image
