@@ -141,6 +141,6 @@
  **验证上传成功：**  
 >1. 因为私有仓库，docker并没有提供web页面，但是提供了[API访问接口](https://docs.docker.com/registry/spec/api/)  
 >2. 查询路径：IP:container_port/API路径 ：`10.25.32.181:5000/v2/<name>/tags/list`  
-**示例: **  
+**示例:**  
      打开[API访问接口](https://docs.docker.com/registry/spec/api/) ,右侧tree_menu找到Listing Repositories，得到其查看路径。  
      拼装请求路径：10.25.32.181:5000/v2/_catalog
