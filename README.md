@@ -118,7 +118,7 @@
 2: 登录docker hub命令 : `docker login` </br>
 3: 登录成功后，上传镜像：`docker push [OPTIONS] NAME[:TAG]` ：`docker push dockerHub账户名/hello-docker:latest`  
 4: 上传成功后，浏览器打开并登录[docker hub官网](https://hub.docker.com),在首页即可看见保存镜像的Repositories.</br>
-**注：** 镜像命名格式：dockerHub账户名/XXX   这是必须条件
+**注：** 镜像image命名格式：dockerHub账户名/XXX   这是必须条件
 
 ##### 方式2：
 [docker hub关联github并auto_build](https://blog.csdn.net/tina_ttl/article/details/51326011#%E5%A6%82%E4%BD%95%E5%9C%A8dockerhub%E4%B8%AD%E5%88%A9%E7%94%A8github%E4%B8%8A%E7%9A%84dockfile%E8%BF%9B%E8%A1%8Cauto-build)
