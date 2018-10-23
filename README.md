@@ -93,7 +93,7 @@
         `ENV name Docker`  </br>
         `ENTRYPOINT ["/bin/bash","-c","echo hello $name"]`   
   
-  9. **CMD 和 ENTRYPOINT的区别**  
+  9. **CMD 和 ENTRYPOINT的区别** [这篇文章一定要读](https://blog.csdn.net/u010900754/article/details/78526443)  
   
   *CMD*
   >1. 设置容器**启动后**默认执行的命令和参数
@@ -120,7 +120,16 @@
    FROM centos  
    ENV say wtf    
    ENTRYPOINT ["/bin/bash","-c","/echo hello $say"] # /bin/bash指明该exec格式的命令能够被shell执行
-```
+```  
+**示例:**  
+```  
+    FROM ubuntu:latest
+    RUN apt-get update && apt-get install -y stress # 压测工具
+    ENTRYPOINT ["/usr/bin/stress"] # 执行stress的启动脚本
+    CMD [] # 用来接收命令行参数
+```  
+运行该Dockerfile生成的image：`docker run -it docker2sun/stress --vm 1 --verbose`  
+image后的即为CMD接收的参数
           
   
   10. EXPOSE:  
