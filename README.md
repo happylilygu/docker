@@ -118,9 +118,11 @@
 2: 登录docker hub命令 : `docker login` </br>
 3: 登录成功后，上传镜像：`docker push [OPTIONS] NAME[:TAG]` ：`docker push dockerHub账户名/hello-docker:latest`  
 4: 上传成功后，浏览器打开并登录[docker hub官网](https://hub.docker.com),在首页即可看见保存镜像的Repositories.</br>
-**注：** 镜像image命名格式：dockerHub账户名/XXX   这是必须条件
+**注：** 镜像image命名格式：dockerHub账户名/XXX   这是必须条件  
+**缺点：** 直接发布镜像，使用者无法清楚知道该镜像是怎么构建的，会不会存在不安全因素。所以方式二值得推荐
 
 ##### 方式2：
+把github和dockerHub绑定，当把DockerFile上传至github，则dockerHub通过auto-build设置，自动创建image，创建完成后，在该仓库中找到生成的image，查看详情，可查看该镜像在github上的DockerFile [点击查看示例](https://hub.docker.com/r/docker2sun/dockerfile/)  
 [docker hub关联github并auto_build](https://blog.csdn.net/tina_ttl/article/details/51326011#%E5%A6%82%E4%BD%95%E5%9C%A8dockerhub%E4%B8%AD%E5%88%A9%E7%94%A8github%E4%B8%8A%E7%9A%84dockfile%E8%BF%9B%E8%A1%8Cauto-build)
 
 ### 创建私有镜像仓库
