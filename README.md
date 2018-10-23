@@ -85,7 +85,7 @@
   8.Dockerfile的两种写法:
   >shell:  
         `FROM centos`</br>
-        ` ENV name Docker `</br>
+        `ENV name Docker `</br>
         `ENTRYPOINT echo "hello $name"`
        
   >Exec:   
@@ -106,9 +106,24 @@
   >1. 设置容器**启动时**运行的命令
   >2. 让容器以应用程序 or 服务的形式运行. 例如：启动mysql
   >3. 不会被忽略，一定会执行  
-  >4. 每个Dockerfile中只能有一个ENTRYPOINT，当指定多个时，只有最后一个起效。
+  >4. 每个Dockerfile中只能有一个ENTRYPOINT，当指定多个时，只有最后一个起效。  
   
-  10. EXPOSE  
+  **引申:** Shell && Exec格式  
+(1).shell格式：  
+ ```  
+   FROM centos  
+   ENV say wtf  
+   ENTRYPOINT echo "em $say"
+```  
+(2). Exec格式：  
+```  
+   FROM centos  
+   ENV say wtf    
+   ENTRYPOINT ["/bin/bash","-c","/echo hello $say"] # /bin/bash指明该exec格式的命令能够被shell执行
+```
+          
+  
+  10. EXPOSE:  
   格式为 EXPOSE <port> [<port>...]。  
   告诉 Docker 服务端容器暴露的端口号，供外网系统使用。在启动容器时需要通过 -P，Docker 主机会自动分配一个端口转发到指定的端口。  
   
