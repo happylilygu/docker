@@ -108,8 +108,9 @@
   >3. 不会被忽略，一定会执行  
   >4. 每个Dockerfile中只能有一个ENTRYPOINT，当指定多个时，只有最后一个起效。
   
-  10. VOLUME && EXPOSE (存储和网络)<预留篇>  
-  TODO.
+  10. EXPOSE  
+  格式为 EXPOSE <port> [<port>...]。  
+  告诉 Docker 服务端容器暴露的端口号，供外网系统使用。在启动容器时需要通过 -P，Docker 主机会自动分配一个端口转发到指定的端口。  
   
 ### 镜像发布
 
