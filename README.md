@@ -99,12 +99,13 @@
   >2. docker run 指定了其他命令，CMD命令被忽略  
   例：  
   ![docker run 指定了其他命令，CMD命令被忽略](https://github.com/momokanni/docker/blob/master/piture/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180911160545.png)  
-  >3. 如果定了多个CMD，只有最后一个会被执行  
+  >3. 每个Dockerfile只能有一条 CMD 命令。如果指定了多条命令，只有最后一条会被执行
   
   *ENTRYPOINT*  
   >1. 设置容器**启动时**运行的命令
   >2. 让容器以应用程序 or 服务的形式运行. 例如：启动mysql
   >3. 不会被忽略，一定会执行  
+  >4. 每个Dockerfile中只能有一个ENTRYPOINT，当指定多个时，只有最后一个起效。
   
   10. VOLUME && EXPOSE (存储和网络)<预留篇>  
   TODO.
