@@ -35,7 +35,8 @@
 
 
 **注：**  
-     test3在未link test1的情况下，之所以能ping通，是因为两个container都连到自己创建的my_bridge上了，所以两个默认是link的 
+     test3在未link test1的情况下，之所以能ping通，是因为两个container都连到自己创建的my_bridge上了，所以两个默认是link的,  
+     同时，创建的容器会默认连接系统的bridge,而在系统默认bridge上无法达到这种效果，这也就是自己创建和系统默认bridge的区别。
      
 
 
