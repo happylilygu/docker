@@ -3,7 +3,9 @@
 分解：
 1. 安装brctl: `yum install bridge-utils`
 2. 运行两个docker container(具体命令看[前文](https://github.com/momokanni/docker/blob/master/README.md))
-3. 命令集： `docker ps `,  
+3. 命令集：   
+    `docker network ls # 列举该台机器上的docker网络`   
+    `docker ps `,  
     ` docker network inspect bridge `  
     ` ip a `  
     ` ifconfig `  
