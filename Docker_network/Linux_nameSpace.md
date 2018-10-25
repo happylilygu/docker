@@ -7,7 +7,7 @@
 >1. 查看列表：`ip netns list`  
 >2. 新增：`ip netns add ns名称`  
 >3. 删除：`ip netns delete ns名称`  
->4. 查看某个ns详细：`ip netns exec ns名称 ip a`   
+>4. 查看某个ns详细：`ip netns exec ns名称 ip a`, `docker exec -it containerName/containerId ip a`   
 >5. 查看某个ns链接： `ip netns exec ns名称 ip link`  
 >6. 唤醒端口：`ip netns exec ns名称 ip link set dev 端口名称 up`
 ![演示图](https://github.com/momokanni/docker/blob/master/piture/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180915180000.png)
