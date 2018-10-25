@@ -3,7 +3,9 @@
 容器间相互通信两种方式:   
 假设现有容器：test1、test2  
 >1. test1 link test2 容器间直接link，此时在容器test1中能ping通test2,反向则不能。  
->2. 创建bridge，两个容器绑定到该brige上，实现双向link
+>2. 创建bridge，两个容器绑定到该brige上，实现双向link  
+
+
 命令：
 >1. ` docker run -d --name test2(容器名称) --link test1(容器名称) --network 网络名称 busybox /bin/sh -c "while true;do sleep 3600;done"`  
      --link(不推荐使用)
