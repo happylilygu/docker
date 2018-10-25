@@ -6,7 +6,7 @@
 3. 命令集：   
     `docker network ls # 列举该台机器上的docker网络`   
     `docker ps `,  
-    ` docker network inspect bridge `  
+    ` docker network inspect bridge #查看网络详细信息`  
     ` ip a `  
     ` ifconfig `  
     ` brctl show ` , **brctl： 用来进行以太网桥接（bridge）的管理**  
