@@ -2,7 +2,7 @@
 1.springBoot + JDK1.8 + Docker version 18.06.1-ce
 
 ### 步骤说明：
-1. springBoot程序打成jar包，并上传Dockerfile所在文件夹内（也可以不用，但没必要折腾自己）
+1. springBoot程序打成jar包，并上传到Dockerfile所在文件夹内（也可以不用，但没必要折腾自己）
 2.创建Dockerfile:
   ```
     FROM java:8   # 引用docker官方Java镜像
