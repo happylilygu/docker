@@ -13,7 +13,7 @@
 >3. ` docker network create -d bridge 网络名称`  
 >4. ` docker network ls `  
 >5. ` docker network inspect 网络名称`  
->6. ` docker network connect 网络名称 containerName` : 将现有container的网络连接link至其他网络  
+>6. ` docker network connect 网络名称 containerName` : **将现有container的网络连接link至其他网络**  
  
 #### 演示  
 ![图1](https://github.com/momokanni/docker/blob/master/piture/link_1.png "图1：--link")  
