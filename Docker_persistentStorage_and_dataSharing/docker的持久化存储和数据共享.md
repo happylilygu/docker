@@ -50,7 +50,13 @@ Docker 镜像是由多个文件系统（只读层）叠加而成，每个层仅�
 * `--character-set-server=utf8mb4` : 设置数据库默认编码  
 * `--collation-server=utf8mb4_unicode_ci` : 对编码格式为utf8的table进行运行排序  
 
-
+![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_5.png)   
+![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_6.png)  
+![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_7.png)  
+![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_8.png)  
+![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_9.png)  
+![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_10.png)  
+![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_11.png)  
 
 
 
