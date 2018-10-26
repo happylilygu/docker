@@ -12,5 +12,39 @@ Docker 镜像是由多个文件系统（只读层）叠加而成，每个层仅�
 
 ![container_layer](https://github.com/momokanni/docker/blob/master/piture/dataSahring_2.png)  
 
+3.**docker数据持久化方案:**  
+先看图
+![R/W](https://github.com/momokanni/docker/blob/master/piture/dataSahring_3.png)  
+
+**注:**  图中container中有运行程序，此时正在进行Write (File_system)的操作,一般默认是write到container 可写层(R/O),但是我们可以通过其他机制，将数据load到本地或者其他地方的存储上,这样存储就和容器隔离开了，当容器被删掉时，外挂的存储还在。  
+
+所以解决方案呈上：  
+
+>1. 基于本地文件系统的Volume。可以在执行Docker create or run 时，通过-v参数将主机的目录作为容器的数据卷。这部分功能便是基于本地文件系统的volume管理。(本地)  
+>2. 基于plugin的Vloume，支持第三方的存储方案，比如NAS、aws。(远程)  
+
+再进一步的扯到了Volume  
+
+4. Volume类型  
+
+>1. 受管理的data-volume,由docker后台自动创建，位置是固定的，名字是随机的.  
+>2. 绑定挂载的Volume，具体挂载位置可以由用户通过参数指定。  
+
+**以mysql官方Dockerfile为例:**  
+
+![mysql_dockerfile](https://github.com/momokanni/docker/blob/master/piture/dataSahring_4.png)  
+
+当启动mysql后，数据库产生的数据会通过这个配置，在本机产生对应的Volume，用来做数据的持久化存储，并且不会随着container的消失而消失。  
+
+**完整操作演示, 口述麻烦，直接上图**  
+
+
+
+
+
+
+
+
+
 
 
