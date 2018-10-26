@@ -43,7 +43,7 @@ Docker 镜像是由多个文件系统（只读层）叠加而成，每个层仅�
 `docker run -d -v mysql:/var/lib/mysql --name mysql_1 -e MYSQL_ROOT_PASSWORD=123456 mysql:5.6 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci`  
 
 * `-d` : 使程序在后台保持运行  
-* `-v mysql:/var/lib/mysql ` : 给volume重命名，并指定存放空间  
+* `-v mysql:/var/lib/mysql ` : 给volume重命名，并指定容器运行的本机的存放空间  
 * `--name mysql_1` : 给容器重命名  
 * `-e` : 设置环境变量  
 * `MYSQL_ROOT_PASSWORD=123456` : 设置数据库密码  
