@@ -66,6 +66,16 @@ Docker 镜像是由多个文件系统（只读层）叠加而成，每个层仅�
 ![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_10.png)  
 ![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_11.png)  
 
+#### 再分析Bind Mouting  
+
+data volume 需要在运行时指定存放空间 ： `docker run -v /var/lib/mysql`  
+
+bind Mouting 需要在运行时指定一个本地目录和容器目录 一一对应的关系  通过这种方式可以实现文件同步。  
+
+上图:  
+
+
+
 
 
 
