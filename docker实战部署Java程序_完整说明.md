@@ -13,7 +13,7 @@
     EXPOSE 8080 # 暴露端口
     ENTRYPOINT ["java","-Djava.security.egd=file:/dev/.urandom","-jar","kill.jar"] # 百度：为了缩短 Tomcat 的启动时间
   ```
-3. 创建image: `docker build -t XXXX/kill-docker:latest .`(命令只要符合语法，怎么写随意，开心就好)  
+3. 创建image: `docker build -t XXXX/kill-docker:latest .`(一定要cd到该文件所在的目录下)  
 4. 运行image，创建container: `docker run -d --name kill -p 8080:8080 -it XXXX/kill-docker --verbose` (命令分解，search by yourself)
 
 **注：**
