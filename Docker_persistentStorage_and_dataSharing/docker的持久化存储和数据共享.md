@@ -25,6 +25,12 @@ Docker 镜像是由多个文件系统（只读层）叠加而成，每个层仅�
 >1. 基于本地文件系统的Volume。可以在执行Docker create or run 时，通过-v参数将主机的目录作为容器的数据卷。这部分功能便是基于本地文件系统的volume管理。(本地)  
 >2. 基于plugin的Vloume，支持第三方的存储方案，比如NAS、aws。(远程)  
 
+**今天我们只探讨方案1：**  
+
+方案1的数据持久化分为： 1.data volume 2. bind mouting  
+
+#### 先分析data volume
+
 再进一步的扯到了Volume  
 
 4. Volume类型  
