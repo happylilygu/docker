@@ -18,7 +18,7 @@ Docker 镜像是由多个文件系统（只读层）叠加而成，每个层仅�
 先看图
 ![R/W](https://github.com/momokanni/docker/blob/master/piture/dataSahring_3.png)  
 
-**注:**  图中container中有运行程序，此时正在进行Write (File_system)的操作,一般默认是write到container 可写层(R/O),但是我们可以通过其他机制，将数据load到本地或者其他地方的存储上,这样存储就和容器隔离开了，当容器被删掉时，外挂的存储还在。  
+**注:**  图中container中有运行程序，此时正在进行Write (File_system)的操作,一般默认是write到container 可写层(R/O),但是我们可以通过其他机制，将数据mount到本地或者其他地方的存储上,这样存储就和容器隔离开了，当容器被删掉时，外挂的存储还在。  
 
 所以解决方案呈上：  
 
