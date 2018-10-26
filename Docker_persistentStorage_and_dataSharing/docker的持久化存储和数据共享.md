@@ -58,13 +58,13 @@ Docker 镜像是由多个文件系统（只读层）叠加而成，每个层仅�
 * `--character-set-server=utf8mb4` : 设置数据库默认编码  
 * `--collation-server=utf8mb4_unicode_ci` : 对编码格式为utf8的table进行运行排序  
 
-![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_5.png)   
-![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_6.png)  
-![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_7.png)  
-![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_8.png)  
-![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_9.png)  
-![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_10.png)  
-![test](https://github.com/momokanni/docker/blob/master/piture/dataSahring_11.png)  
+![data_volume](https://github.com/momokanni/docker/blob/master/piture/dataSahring_5.png)   
+![data_volume](https://github.com/momokanni/docker/blob/master/piture/dataSahring_6.png)  
+![data_volume](https://github.com/momokanni/docker/blob/master/piture/dataSahring_7.png)  
+![data_volume](https://github.com/momokanni/docker/blob/master/piture/dataSahring_8.png)  
+![data_volume](https://github.com/momokanni/docker/blob/master/piture/dataSahring_9.png)  
+![data_volume](https://github.com/momokanni/docker/blob/master/piture/dataSahring_10.png)  
+![data_volume](https://github.com/momokanni/docker/blob/master/piture/dataSahring_11.png)  
 
 #### 再分析Bind Mouting  
 
@@ -72,7 +72,20 @@ data volume 需要在运行时指定存放空间 ： `docker run -v /var/lib/mys
 
 bind Mouting 需要在运行时指定一个本地目录和容器目录 一一对应的关系  通过这种方式可以实现文件同步。  
 
-上图:  
+在看图之前，先解释一遍命令:  
+
+`docker run -d -v /usr/local/sunLin/docker/nginx/:/usr/share/nginx/html -p 80:80 --name nginx docker2sun/nginx`  
+
+* `-v /usr/local/sunLin/docker/nginx/:/usr/share/nginx/html` : 服务器本机目录和容器内的目录做一个映射，关联起来，从而实现文件同步  
+
+![bind_mouting](https://github.com/momokanni/docker/blob/master/piture/dataSahring_12.png)  
+![bind_mouting](https://github.com/momokanni/docker/blob/master/piture/dataSahring_13.png)  
+![bind_mouting](https://github.com/momokanni/docker/blob/master/piture/dataSahring_14.png)  
+![bind_mouting](https://github.com/momokanni/docker/blob/master/piture/dataSahring_15.png)  
+![bind_mouting](https://github.com/momokanni/docker/blob/master/piture/dataSahring_16.png)  
+
+
+
 
 
 
