@@ -73,6 +73,7 @@ data volume 需要在运行时指定存放空间 ： `docker run -v /var/lib/mys
 bind Mouting 需要在运行时指定一个本地目录和容器目录 一一对应的关系  通过这种方式可以实现文件同步。  
 
 在看图之前，先解释一遍命令:  
+[nginx Dockerfile文件地址](https://github.com/momokanni/Dockerfile/tree/master/nginx)  
 
 `docker run -d -v /usr/local/sunLin/docker/nginx/:/usr/share/nginx/html -p 80:80 --name nginx docker2sun/nginx`  
 
