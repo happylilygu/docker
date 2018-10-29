@@ -16,3 +16,5 @@ docker-compose多容器部署机制：
 * `docker-compose stop`  
 * `docker-compose exec serviceName bash`  
 * `docker-compose up --scale serviceName=number -d`  
+
+
