@@ -26,8 +26,11 @@
 2. 根据状态查找container集合：`docker container ls -f "status=exited"` ,-q: 只列出ID。  
 3. 查询网络：`docker network ls`  
 4. 容器网络资源检查：`docker network inspect container_id/container_name/networkType`
-##### 删除：
-1. 批量删除: `docker rm $(docker container ls -aq)` or `docker rm $(docker container ls -f "status=exited" -q)`
+##### 删除容器：
+1. 批量删除: `docker rm $(docker container ls -aq)` or `docker rm $(docker container ls -f "status=exited" -q)`  
+
+##### 删除镜像:  
+1. `docker rmi <image id>`
 
 ##### 查看日志：
 1. `docker logs container_id`
